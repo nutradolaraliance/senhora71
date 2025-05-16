@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+      <script>
+  window.pixelId = "67edf4c3c10671e61577006d";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favi.webp" type="image/png" />
+    <title>Ajude Senhora de 71 anos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/glide.core.min.css" />
+    <link rel="stylesheet" href="css/glide.theme.min.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <script src="js/qrcode.min.js"></script>
+  </head>
+<script>
+  // Parâmetros que você quer passar adiante
+  const paramsToKeep = [
+    "utm_source",
+    "utm_campaign",
+    "utm_medium",
+    "utm_content",
+    "utm_term",
+    "xcod"
+  ];
+
+  function getCurrentParams() {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const result = {};
+    paramsToKeep.forEach(param => {
+      const value = urlSearchParams.get(param);
+      if (value) result[param] = value;
+    });
+    return result;
+  }
+
+  function buildQueryString(params) {
+    return Object.entries(params)
+      .map(([key, val]) => ${encodeURIComponent(key)}=${encodeURIComponent(val)})
+      .join("&");
+  }
+
+  function updateInternalLinks() {
+    const links = document.querySelectorAll("a[href]");
+    const currentParams = getCurrentParams();
+    if (Object.keys(currentParams).length === 0) return;
+
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+
+      // Só aplica em links relativos (ou seja, dentro do site)
+      if (href.startsWith("/") || href.startsWith(window.location.origin)) {
+        const url = new URL(href, window.location.origin);
+        const linkParams = new URLSearchParams(url.search);
+
+        // Adiciona os parâmetros desejados
+        for (const key in currentParams) {
+          linkParams.set(key, currentParams[key]);
+        }
+
+        url.search = linkParams.toString();
+        link.setAttribute("href", url.pathname + url.search);
+      }
+    });
+  }
+
+  // Quando a página carregar, atualiza os links
+  document.addEventListener("DOMContentLoaded", updateInternalLinks);
+</script>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a>
+            <img src="images/ajudelogo.png" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="post">
+      <h3>
+        💔 UM GRITO DE SOCORRO QUE NÃO PODE SER IGNORADO
+      </h3>
+      <img src="images/senhora71.png" />
+      <div class="image-container">
+        <div class="likes-container">
+          <img src="images/boll.png" alt="Corações" />
+          <!-- Mini Imagem que você carregou -->
+          <span>117 corações recebidos ❤️</span>
+        </div>
+      </div>
+      <a href="#button-section" class="btn-anchor">
+        <button class="post-button3">DOAR AGORA</button>
+      </a>
+      <p><strong>Senhora de 71 anos que acumulou lixo até o telhado de sua casa</strong></p>
+
+      <p>
+        Hoje eu venho compartilhar com vocês uma história real. Dura. Comovente. Que clama por compaixão. <strong>É sobre uma senhora de 71 anos, que há muito tempo luta silenciosamente com um transtorno chamado acúmulo compulsivo. </strong> O que muitos enxergam como “lixo”, para ela se tornou um abrigo emocional, um reflexo de traumas, perdas e solidão.</strong>.
+      </p>
+
+      <p>
+        <strong>Mas agora a situação chegou ao limite.
+A casa onde ela morava está tomada pelo acúmulo — o lixo chegou ao telhado. Ela não consegue mais entrar em sua própria casa. Já faz meses que dorme do lado de fora, em cima do lixo, sem proteção, sem conforto, sem dignidade.</strong>.
+      </p>
+
+      <p>
+        Ela não é um caso, não é um número.</strong>  É uma vida. É uma senhora que poderia ser nossa mãe, nossa avó, nossa vizinha.
+
+      </p>
+
+      <p>
+       Ela precisa de ajuda. E não só de limpeza. Ela precisa de um gesto humano. Precisa de pessoas que olhem além da aparência, que enxerguem a dor, a doença, o abandono — e decidam agir por amor.</strong>.
+      </p>
+
+      <p>
+        "<strong> Estamos organizando uma ação para limpar o espaço, dar suporte emocional, assistência básica e mostrar que ela não está sozinha.</strong
+        >"
+      </p>
+
+      
+      <p>
+        Mas a verdade é que... <strong>a gente chegou num ponto crítico.</strong> Ela é sozinha e sem ajuda do governo ou parentes...
+      </p>
+Se você puder ajudar — com recursos, com tempo, com doações, com divulgação — qualquer gesto fará diferença.
+
+Porque ninguém merece passar o fim da vida assim.
+E porque a gente pode mudar essa realidade. Juntos.
+      
+      </p>
+
+      <p>
+       
+      </p>
+      <img src="images/image (12).png" style="width: 90%; height: auto" />
+    
+      <p>
+        É a mesma <strong>tecnologia</strong> usada por
+        <strong>cirurgiões</strong> pra operar à distância, adaptada para
+        devolver a <strong>independência</strong> a Senhora de 71 anos.
+      </p>
+      <img src="images/mano2.png" style="width: 90%; height: auto" />
+      <p>Se você está lendo isso agora, eu te peço com o coração aberto: nos ajude.
+
+Assista nosso vídeo. Veja com seus próprios olhos quem é a Senhora de 71 anos.
+
+E se puder doar qualquer valor, saiba que estará ajudando dois irmãos a continuar lutando juntos — com dignidade, com carinho, com esperança.
+
+Você pode ser a diferença entre a dor e o alívio. Entre o desespero e a esperança.
+      </p>
+      <a href="#button-section" class="btn-anchor">
+        <button class="post-button3">DOAR AGORA</button>
+      </a>
+      <p><strong>Você receberá:</strong></p>
+
+      <p><strong>● Atualizações semanais</strong> da nossa jornada</p>
+      <p><strong>● Vídeo do primeiro abraço</strong> e ela vivendo na nova casa</p>
+      <p><strong>● Seu nome na nossa lista de anjos</strong> (se desejar)</p>
+
+      <p>
+        <strong>Compartilhe nossa história</strong>. Cada compartilhamento é uma
+        <strong>nova chance</strong> de devolver o minimo de dignidade.
+      </p>
+
+      <p><strong>Que Deus abençoe você e a sua família</strong>.</p>
+
+      <p><strong>Att: Senhora de 71 anos</strong>.</p>
+
+ <div id="button-section">
+        <div class="progress-content">
+          <div class="progress-text">
+            <h4>Arrecadado</h4>
+            <div class="progress-values">
+              <p>R$ 42.450,41</p>
+              <p>R$ 287.000,00</p>
+            </div>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 14%">
+              <strong>14%</strong>
+            </div>
+          </div>
+        </div>
+
+        <h4 style="text-align: center;">Clique no valor <br> que deseja doar</h4>
+        <p class="donation-multiplier"><strong>✨ DOAÇÃO DUPLICADA! ✨</strong> Doações a partir de R$50 serão multiplicadas por 2 pelos nossos patrocinadores e grupo de empresários que apoiam nossa campanha! Sua ajuda vale o dobro até 25/05. Não perca essa oportunidade de maximizar seu impacto na vida dessa Senhora de 71 anos!</p>
+        <div class="email-donation">
+          <h4 style="text-align: center; margin-top: 10px; margin-bottom: 15px;">Se preferir utilize nossa chave pix e-mail que esta destinada somenta para isso tambem:</h4>
+          <div class="email-container">
+            <span id="donation-email">doedecoracao2025@gmail.com</span>
+            <button id="copy-email-btn" onclick="copyEmail()">Copiar</button>
+          </div>
+        </div>
+        
+        <div class="buttons-section">
+          <div class="buttons-section1">
+            <a href="#">
+              <button class="post-button2">R$ 30</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2" style="border: 2px solid #ffcc00; box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);">R$ 50</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 80</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 150</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 250</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 350</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 450</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 600</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 900</button>
+            </a>
+          </div>
+          <div class="buttons-section1">
+            <a href="#">
+              <button class="post-button2">R$ 40</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 70</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 100</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 200</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 300</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 400</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 500</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 700</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 1000</button>
+            </a>
+          </div>
+        </div>
+          <div class="sc-jXbUNg gNPJrz">
+            <div class="sc-jXbUNg dHwLb">
+              <div class="sc-jXbUNg jbBvcf"></div>
+              <div class="sc-jXbUNg dTrGCo sc-gRtvSG fpURXW"></div>
+            </div>
+          </div>
+
+          <div class="button-pix">
+            <div class="texto" id="1">
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-section logo-section">
+            <a>
+              <img src="images/ajudelogo.png" />
+            </a>
+          </div>
+
+          <div class="footer-bottom">
+            <p>2025 - Todos direitos reservados</p>
+          </div>
+        </div>
+      </footer>
+
+      <script data-cfasync="false" src="js/email-decode.min.js"></script>
+      <script src="js/script.js"></script>
+      <script src="js/pix.js"></script>
+      <script src="js/toast.js"></script>
+      <script>
+        function copyEmail() {
+          const emailText = document.getElementById('donation-email').textContent;
+          navigator.clipboard.writeText(emailText)
+            .then(() => {
+              showToast('Email copiado com sucesso!', 'success');
+            })
+            .catch(err => {
+              console.error('Erro ao copiar email: ', err);
+              showToast('Erro ao copiar email', 'error');
+            });
+        }
+
+        function showToast(message, type) {
+          const toast = document.createElement('div');
+          toast.className = 'toast ' + type;
+          toast.innerHTML = `
+            <div class="toast-content">
+              <span>${message}</span>
+            </div>
+          `;
+          document.body.appendChild(toast);
+          
+          // Mostra o toast
+          setTimeout(() => {
+            toast.classList.add('show');
+          }, 100);
+          
+          // Remove o toast após 3 segundos
+          setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => {
+              document.body.removeChild(toast);
+            }, 300);
+          }, 3000);
+        }
+      </script>
+      <style>
+        .email-donation {
+          margin: 20px auto;
+          max-width: 500px;
+          text-align: center;
+        }
+        .email-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          margin: 0 auto 20px;
+          padding: 12px;
+          background-color: #f5f8ff;
+          border-radius: 8px;
+          border: 1px solid #ccdeff;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          max-width: 450px;
+        }
+        #donation-email {
+          font-weight: bold;
+          color: #3366cc;
+          font-size: 16px;
+        }
+        #copy-email-btn {
+          background-color: #1e88e5;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          padding: 8px 15px;
+          cursor: pointer;
+          font-weight: bold;
+          transition: background-color 0.3s;
+        }
+        #copy-email-btn:hover {
+          background-color: #1565c0;
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilos da Toast */
+        .toast {
+          position: fixed;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%) translateY(100px);
+          padding: 12px 20px;
+          border-radius: 4px;
+          color: white;
+          font-weight: 500;
+          z-index: 9999;
+          opacity: 0;
+          transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+          max-width: 80%;
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .toast.show {
+          transform: translateX(-50%) translateY(0);
+          opacity: 1;
+        }
+        
+        .toast.success {
+          background-color: #43a047;
+        }
+        
+        .toast.error {
+          background-color: #e53935;
+        }
+        
+        .toast-content {
+          display: flex;
+          align-items: center;
+        }
+      </style>
+  </body>
+</html>
