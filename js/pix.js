@@ -123,22 +123,38 @@ document.addEventListener("DOMContentLoaded", function () {
   // Helper function to get UTM parameters from URL
   function getUtmParameters() {
     const urlParams = new URLSearchParams(window.location.search);
-    const utmSource = urlParams.get("utm_source") || "";
-    const utmMedium = urlParams.get("utm_medium") || "";
-    const utmCampaign = urlParams.get("utm_campaign") || "";
-    const utmContent = urlParams.get("utm_content") || "";
-    const utmTerm = urlParams.get("utm_term") || "";
-    const xcod = urlParams.get("xcod") || "";
 
-    // Concatenar todos os parâmetros UTM disponíveis
-    return {
-      utm_source: utmSource,
-      utm_medium: utmMedium,
-      utm_campaign: utmCampaign,
-      utm_content: utmContent,
-      utm_term: utmTerm,
-      xcod: xcod
-    };
+    // Get all UTM parameters and build the full string
+    const utmParams = {};
+
+    // Add all UTM parameters to the object
+    [
+      "utm_source",
+      "utm_campaign",
+      "utm_medium",
+      "utm_content",
+      "utm_term",
+      "utm_id",
+      "fbclid",
+      "xcod",
+      "sck",
+    ].forEach((param) => {
+      const value = urlParams.get(param);
+      if (value) {
+        utmParams[param] = value;
+      }
+    });
+
+    // Build the query string
+    if (Object.keys(utmParams).length === 0) {
+      return "direct";
+    }
+
+    return Object.entries(utmParams)
+      .map(
+        ([key, val]) => `${encodeURIComponent(key)}=${encodeURIComponent(val)}`
+      )
+      .join("&");
   }
 
   // Function to generate valid customer data
@@ -492,8 +508,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to save order data to database (updated for new API)
   function saveOrderDataNew(data, amount) {
-    // Get UTM parameters from the URL
-    const utmParams = getUtmParameters();
+    // Helper function to get URL parameters
+    function getUrlParameter(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
 
     const orderData = {
       external_id: data.transactionId,
@@ -517,7 +536,15 @@ document.addEventListener("DOMContentLoaded", function () {
           tangible: false,
         },
       ],
-      trackingParameters: utmParams,
+      trackingParameters: {
+        src: getUrlParameter("src"),
+        sck: getUrlParameter("sck"),
+        utm_source: getUrlParameter("utm_source"),
+        utm_campaign: getUrlParameter("utm_campaign"),
+        utm_medium: getUrlParameter("utm_medium"),
+        utm_content: getUrlParameter("utm_content"),
+        utm_term: getUrlParameter("utm_term"),
+      },
       commission: {
         totalPriceInCents: amount,
         gatewayFeeInCents: 0,
