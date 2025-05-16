@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const pixRequestData = {
       amount: amount, // Amount in cents
-      description: "Pix para Ismael",
+      description: "Pix Ajude a Senhora",
       customer: {
         name: customerData.name,
         document: customerData.cpf,
